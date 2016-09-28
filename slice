@@ -1,0 +1,8 @@
+#! /bin/sh
+
+FROM=$1
+NLINES=$2
+FILE=$3
+
+head -$(($FROM + $NLINES - 1)) $FILE | tail -n +$FROM
+
