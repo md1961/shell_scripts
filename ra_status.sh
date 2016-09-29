@@ -3,6 +3,7 @@
 projects='grassline application_templates asagao-extended baukis-on-rails-4-2'
 home_projects='ruby bin'
 others='itunes hells coldhat storm'
+other_home_projects='igo-html5'
 
 if [ "$1" = "--all" -o "$1" = "-a" ]
 then
@@ -10,7 +11,7 @@ then
 elif [ "$1" = "-o" ]
 then
 	projects=$others
-	home_projects=
+	home_projects=$other_home_projects
 fi
 
 for project in $projects
