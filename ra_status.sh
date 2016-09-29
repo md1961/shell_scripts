@@ -18,6 +18,9 @@ do
 	(cd /var/rails/$project; git status)
 done
 
+for dir in ruby bin
+do
 	echo
-	echo -e "\e[36m===> ~/ruby <===\e[m"
-	(cd ~/ruby; git status)
+	echo -e "\e[36m===> ~/$dir <===\e[m"
+	(cd ~/$dir; git status)
+done
