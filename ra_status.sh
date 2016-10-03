@@ -2,7 +2,7 @@
 
 projects='grassline application_templates asagao-extended baukis-on-rails-4-2'
 home_projects='ruby bin'
-others='itunes hells coldhat storm'
+others='coldhat storm itunes hells'
 other_home_projects='igo-html5'
 
 if [ "$1" = "--all" -o "$1" = "-a" ]
