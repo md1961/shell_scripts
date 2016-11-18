@@ -1,6 +1,7 @@
 #! /bin/sh
 
-HOSTS='ariel mimas sinope'
+HOSTS_FILE=$(dirname $0)/hosts_for_trans_hosts
+HOSTS=$(cat $HOSTS_FILE)
 
 for host in $HOSTS
 do
