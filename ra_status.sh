@@ -1,4 +1,5 @@
-#! /bin/sh
+#!/bin/bash
+set -Ceu
 
 . $(dirname $0)/ra_status_vars
 # Define the following variables in the above file:
@@ -7,14 +8,17 @@
 #   others='coldhat storm itunes hells'
 #   other_home_projects='igo-html5 paiza_exercise'
 
-if [ "$1" = "--all" -o "$1" = "-a" ]
+if [ $# -ge 1 ]
 then
-	projects="$projects $others"
-	home_projects="$home_projects $other_home_projects"
-elif [ "$1" = "-o" ]
-then
-	projects=$others
-	home_projects=$other_home_projects
+    if [ "$1" = "--all" -o "$1" = "-a" ]
+    then
+        projects="$projects $others"
+        home_projects="$home_projects $other_home_projects"
+    elif [ "$1" = "-o" ]
+    then
+        projects=$others
+        home_projects=$other_home_projects
+    fi
 fi
 
 for project in $projects

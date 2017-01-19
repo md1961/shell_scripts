@@ -1,4 +1,5 @@
-#! /bin/sh
+#!/bin/bash
+set -Ceu
 
 HOSTS_FILE=$(dirname $0)/hosts_for_trans_hosts
 HOSTS=$(cat $HOSTS_FILE)

@@ -1,8 +1,9 @@
-#! /bin/sh
+#!/bin/bash
+set -Ceu
 
 do_toggle=true
 
-if [ -n "$1" ]
+if [ $# -ge 1 ]
 then
 	do_toggle=
 fi
@@ -20,6 +21,7 @@ pushd ~ > /dev/null
 if [ "$do_toggle" = "true" ]
 then
 	ln -sf $dest .netrc
+    echo -n 'Toggled: '
 fi
-echo "Now .netrc -> $(ls -l .netrc | awk '{print $NF}')"
+echo ".netrc -> $(ls -l .netrc | awk '{print $NF}')"
 popd    > /dev/null
