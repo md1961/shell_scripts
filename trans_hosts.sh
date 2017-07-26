@@ -12,4 +12,4 @@ do
 done
 
 echo -e "\e[36m===> `hostname` <===\e[m"
-$@
+bash -c "$@"
