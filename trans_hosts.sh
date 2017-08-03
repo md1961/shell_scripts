@@ -1,5 +1,5 @@
 #!/bin/bash
-set -Ceu
+set -Cu
 
 HOSTS_FILE=$(dirname $0)/hosts_for_trans_hosts
 HOSTS=$(cat $HOSTS_FILE)
